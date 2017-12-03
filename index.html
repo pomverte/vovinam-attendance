@@ -73,13 +73,13 @@
 
   <script src="https://unpkg.com/vue@2.5.9/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="http://momentjs.com/downloads/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment-with-locales.min.js"></script>
 
   <script>
     var app = new Vue({
       el: '#app',
       data: {
-        today: moment().format('dddd DD/MM/YYYY'),
+        today: moment().locale('fr').format('dddd DD/MM/YYYY'),
         search: '',
         users: [],
         attendedUsers: []

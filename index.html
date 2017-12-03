@@ -83,7 +83,7 @@
       	  var self = this;
           return this.users.filter(function(user) {
             // TODO sanitize carateres speciaux
-            return (user.firstName + user.lastName).toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
+            return (user.firstName + ' ' + user.lastName).toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
           });
         }
       },

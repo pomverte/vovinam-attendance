@@ -56,6 +56,7 @@
         </div>
 
         <div class="col-sm-4">
+          <label v-if="attendedUsers.length > 0">Cours du {{ today }}</label>
           <ul class="list-group">
             <li v-for="(user, index) in attendedUsers" class="list-group-item">
               <span>{{ user.firstName }}</span>
@@ -72,11 +73,13 @@
 
   <script src="https://unpkg.com/vue@2.5.9/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="http://momentjs.com/downloads/moment.min.js"></script>
 
   <script>
     var app = new Vue({
       el: '#app',
       data: {
+        today: moment().format('dddd DD/MM/YYYY'),
         search: '',
         users: [],
         attendedUsers: []

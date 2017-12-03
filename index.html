@@ -51,7 +51,10 @@
 
         <div class="col-sm-4">
           <ul class="list-group">
-            <li v-for="user in attendedUsers" class="list-group-item">{{ user.firstName }}</li>
+            <li v-for="user in attendedUsers" class="list-group-item">
+              <span>{{ user.firstName }}</span>
+              <i type="button" class="glyphicon glyphicon-trash" style="float: right; font-size: 20px;"></i>
+            </li>
           </ul>
         </div>
 

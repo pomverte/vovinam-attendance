@@ -39,17 +39,20 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="user in foundUsers">
+              <tr v-for="user in foundUsers" :key="user.id">
                 <td>{{ user.firstName }}</td>
                 <td>{{ user.lastName }}</td>
                 <td>{{ user.rank }}</td>
-                <td><button type="button" class="btn btn-default">Default</button></td>
+                <td><button type="button" @click="attending(user)" class="btn btn-default">Default</button></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="col-sm-4">
+          <ul class="list-group">
+            <li v-for="user in attendedUsers" class="list-group-item">{{ user.firstName }}</li>
+          </ul>
         </div>
 
       </div>
@@ -64,7 +67,16 @@
       el: '#app',
       data: {
         search: '',
-        users: []
+        users: [],
+        attendedUsers: []
+      },
+      methods: {
+        attending: function (user) {
+          var self = this;
+          if(this.attendedUsers.indexOf(user) === -1) {
+            this.attendedUsers.push(user);
+          }
+        }
       },
       computed: {
         foundUsers: function() {

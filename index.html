@@ -40,9 +40,9 @@
             </thead>
             <tbody>
               <tr v-for="user in foundUsers" :key="user.id">
-                <td>{{ user.firstName }}</td>
-                <td>{{ user.lastName }}</td>
-                <td>{{ user.rank }}</td>
+                <td style="vertical-align: middle;">{{ user.firstName }}</td>
+                <td style="vertical-align: middle;">{{ user.lastName }}</td>
+                <td style="vertical-align: middle;">{{ user.rank }}</td>
                 <td><button type="button" @click="attending(user)" class="btn btn-default">Default</button></td>
               </tr>
             </tbody>

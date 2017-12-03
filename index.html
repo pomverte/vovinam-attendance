@@ -56,7 +56,9 @@
         </div>
 
         <div class="col-sm-4">
-          <label v-if="attendedUsers.length > 0">Cours du {{ today }}</label>
+          <label v-if="attendedUsers.length > 0">
+            Cours du {{ today }} <span class="badge">{{ attendedUsers.length }}</span>
+          </label>
           <ul class="list-group">
             <li v-for="(user, index) in attendedUsers" class="list-group-item">
               <span>{{ user.firstName }}</span>

@@ -43,7 +43,7 @@
                 <td style="vertical-align: middle;">{{ user.firstName }}</td>
                 <td style="vertical-align: middle;">{{ user.lastName }}</td>
                 <td style="vertical-align: middle;">{{ user.rank }}</td>
-                <td><i type="button" @click="attending(user)" class="glyphicon glyphicon-check" style="font-size: 25px;"></i></td>
+                <td><i type="button" @click="addUser(user)" class="glyphicon glyphicon-check" style="font-size: 25px;"></i></td>
               </tr>
             </tbody>
           </table>
@@ -71,7 +71,7 @@
         attendedUsers: []
       },
       methods: {
-        attending: function (user) {
+        addUser: function (user) {
           var self = this;
           if(this.attendedUsers.indexOf(user) === -1) {
             this.attendedUsers.push(user);

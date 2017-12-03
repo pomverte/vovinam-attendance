@@ -48,50 +48,14 @@
   </body>
 
   <script src="https://unpkg.com/vue@2.5.9/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
   <script>
     var app = new Vue({
       el: '#app',
       data: {
         search: '',
-        users: [
-          {
-            "id": 0,
-            "firstName": "Hong Viet",
-            "lastName": "Lê",
-            "rank": "CJ02"
-          },
-          {
-            "id": 1,
-            "firstName": "Yoann",
-            "lastName": "Magdelonnette",
-            "rank": "CJ02"
-          },
-          {
-            "id": 2,
-            "firstName": "Aurore",
-            "lastName": "Le Tarnec",
-            "rank": "CB03"
-          },
-          {
-            "id": 3,
-            "firstName": "Camille",
-            "lastName": "Cosson",
-            "rank": "CJ02"
-          },
-          {
-            "id": 4,
-            "firstName": "Joséphine",
-            "lastName": "Roses",
-            "rank": "CJ01"
-          },
-          {
-            "id": 5,
-            "firstName": "David",
-            "lastName": "Trân",
-            "rank": "CJ04"
-          }
-        ]
+        users: []
       },
       computed: {
         foundUsers: function() {
@@ -101,6 +65,15 @@
             return (user.firstName + user.lastName).toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
           });
         }
+      },
+      created: function () {
+        axios.get('https://raw.githubusercontent.com/pomverte/vovinam-attendance/develop/users.json')
+          .then(function (response) {
+            this.app.users = response.data;
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
       }
     })
   </script>

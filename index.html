@@ -56,9 +56,9 @@
 
         <div class="col-sm-4">
           <ul class="list-group">
-            <li v-for="user in attendedUsers" class="list-group-item">
+            <li v-for="(user, index) in attendedUsers" class="list-group-item">
               <span>{{ user.firstName }}</span>
-              <i type="button"
+              <i type="button" @click="removeUser(index)"
                 class="glyphicon glyphicon-trash"
                 style="float: right; font-size: 20px;"></i>
             </li>
@@ -86,6 +86,9 @@
           if(this.attendedUsers.indexOf(user) === -1) {
             this.attendedUsers.push(user);
           }
+        },
+        removeUser: function(index) {
+          this.attendedUsers.splice(index, 1);
         }
       },
       computed: {

@@ -1,0 +1,57 @@
+[
+  {"id": 0, "firstName": "AURÉLIEN", "lastName": "A.", "rank": "CB01"}
+  {"id": 1, "firstName": "SCOTT", "lastName": "A.", "rank": "CB03"}
+  {"id": 2, "firstName": "OUISSEM", "lastName": "B.", "rank": "CB01"}
+  {"id": 3, "firstName": "FIRDAOUSS", "lastName": "B.", "rank": "CB00"}
+  {"id": 4, "firstName": "NINOSHKA", "lastName": "B.", "rank": "CB03"}
+  {"id": 5, "firstName": "ROMAIN", "lastName": "B.", "rank": "CB02"}
+  {"id": 6, "firstName": "JULIEN", "lastName": "B.", "rank": "CB00"}
+  {"id": 7, "firstName": "MICHELE", "lastName": "C.", "rank": "CB00"}
+  {"id": 8, "firstName": "IRIS", "lastName": "C.", "rank": "CB00"}
+  {"id": 9, "firstName": "ADRIEN", "lastName": "C.", "rank": "CB00"}
+  {"id": 10, "firstName": "DAVID", "lastName": "C.", "rank": "CN02"}
+  {"id": 11, "firstName": "RAPHAEL", "lastName": "C.", "rank": "CB00"}
+  {"id": 12, "firstName": "FAUSTINE", "lastName": "C.", "rank": "CB00"}
+  {"id": 13, "firstName": "MORGANE", "lastName": "D.", "rank": "CN01"}
+  {"id": 14, "firstName": "THIBAULT", "lastName": "D.", "rank": "CB00"}
+  {"id": 15, "firstName": "SYLVAIN", "lastName": "D.", "rank": "CB01"}
+  {"id": 16, "firstName": "ROMAN", "lastName": "D.", "rank": "CB00"}
+  {"id": 17, "firstName": "DOUNIA", "lastName": "F.", "rank": "CB00"}
+  {"id": 18, "firstName": "YANNICK", "lastName": "F.", "rank": "CB01"}
+  {"id": 19, "firstName": "DYLAN", "lastName": "F.", "rank": "CB01"}
+  {"id": 20, "firstName": "SÉBASTIEN", "lastName": "F.", "rank": "CB01"}
+  {"id": 21, "firstName": "VICTOIRE", "lastName": "G.", "rank": "CB00"}
+  {"id": 22, "firstName": "LOUISE", "lastName": "G.", "rank": "CB00"}
+  {"id": 23, "firstName": "HUBERT", "lastName": "G.", "rank": "CN04"}
+  {"id": 24, "firstName": "ROBIN", "lastName": "H.", "rank": "CB00"}
+  {"id": 25, "firstName": "HICHAM", "lastName": "H.", "rank": "CB03"}
+  {"id": 26, "firstName": "KIM LAN", "lastName": "H.", "rank": "CB00"}
+  {"id": 27, "firstName": "PAUL", "lastName": "J.", "rank": "CN01"}
+  {"id": 28, "firstName": "YACOUBA", "lastName": "K.", "rank": "CB03"}
+  {"id": 29, "firstName": "AZZEDDIN", "lastName": "K.", "rank": "CB01"}
+  {"id": 30, "firstName": "ALEXANDRE", "lastName": "L.", "rank": "CN03"}
+  {"id": 31, "firstName": "HONG VIÊT", "lastName": "L.", "rank": "CN02"}
+  {"id": 32, "firstName": "AURORE", "lastName": "L.", "rank": "CB03"}
+  {"id": 33, "firstName": "BERNARD", "lastName": "L.", "rank": "CN02"}
+  {"id": 34, "firstName": "SAMUEL", "lastName": "L.", "rank": "CB00"}
+  {"id": 35, "firstName": "SARAH", "lastName": "L.", "rank": "CB00"}
+  {"id": 36, "firstName": "SYLVERT", "lastName": "L.", "rank": "CB00"}
+  {"id": 37, "firstName": "YOANN", "lastName": "M.", "rank": "CN02"}
+  {"id": 38, "firstName": "CHIR", "lastName": "M.", "rank": "CN02"}
+  {"id": 39, "firstName": "MATHIEU", "lastName": "M.", "rank": "CN02"}
+  {"id": 40, "firstName": "CEDRIC", "lastName": "M.", "rank": "CN00"}
+  {"id": 41, "firstName": "MICHAEL", "lastName": "M.", "rank": "CB00"}
+  {"id": 42, "firstName": "CHRISTIAN", "lastName": "N.", "rank": "CB03"}
+  {"id": 43, "firstName": "TIÊN HUNG", "lastName": "N.", "rank": "CN03"}
+  {"id": 44, "firstName": "RODRIGUE", "lastName": "P.", "rank": "CB01"}
+  {"id": 45, "firstName": "ARTHUR", "lastName": "P.", "rank": "CB00"}
+  {"id": 46, "firstName": "HONORÉ", "lastName": "P.", "rank": "CB00"}
+  {"id": 47, "firstName": "MYLENE", "lastName": "P.", "rank": "CB00"}
+  {"id": 48, "firstName": "BRYAN", "lastName": "P.", "rank": "CB01"}
+  {"id": 49, "firstName": "LEOPOLDO", "lastName": "R.", "rank": "CB00"}
+  {"id": 50, "firstName": "AMINE", "lastName": "R.", "rank": "CB00"}
+  {"id": 51, "firstName": "ROMUALD", "lastName": "S.", "rank": "CN02"}
+  {"id": 52, "firstName": "CATALDE", "lastName": "S.", "rank": "CN06"}
+  {"id": 53, "firstName": "DOMINIQUE", "lastName": "S.", "rank": "CN02"}
+  {"id": 54, "firstName": "ALEXIS", "lastName": "S.", "rank": "CB00"}
+]

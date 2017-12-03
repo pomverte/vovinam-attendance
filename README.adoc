@@ -1,4 +1,9 @@
 # Vovinam Attendance
 
-My Vue.js test ...
+Une application de liste de présence en VueJS
 
+## References
+
+* https://vuejs.org/
+* https://vuejs.org/v2/guide/
+* http://slides.com/evanyou/progressive-javascript/

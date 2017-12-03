@@ -25,7 +25,8 @@
           <!-- Recherche -->
           <div class="form-group">
             <label for="search-user-input">Recherche :</label>
-            <input id="search-user-input" v-model="search" type="text" class="form-control">
+            <input id="search-user-input"
+              v-model="search" type="text" class="form-control">
           </div>
 
           <!-- Liste des pratiquants -->
@@ -43,7 +44,11 @@
                 <td style="vertical-align: middle;">{{ user.firstName }}</td>
                 <td style="vertical-align: middle;">{{ user.lastName }}</td>
                 <td style="vertical-align: middle;">{{ user.rank }}</td>
-                <td><i type="button" @click="addUser(user)" class="glyphicon glyphicon-check" style="font-size: 25px;"></i></td>
+                <td>
+                  <i type="button" @click="addUser(user)"
+                    class="glyphicon glyphicon-check"
+                    style="font-size: 25px;"></i>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -53,7 +58,9 @@
           <ul class="list-group">
             <li v-for="user in attendedUsers" class="list-group-item">
               <span>{{ user.firstName }}</span>
-              <i type="button" class="glyphicon glyphicon-trash" style="float: right; font-size: 20px;"></i>
+              <i type="button"
+                class="glyphicon glyphicon-trash"
+                style="float: right; font-size: 20px;"></i>
             </li>
           </ul>
         </div>
@@ -86,7 +93,8 @@
       	  var self = this;
           return this.users.filter(function(user) {
             // TODO sanitize carateres speciaux
-            return (user.firstName + ' ' + user.lastName).toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
+            return (user.firstName + ' ' + user.lastName)
+              .toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
           });
         }
       },

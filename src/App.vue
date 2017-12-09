@@ -9,11 +9,14 @@
           <!-- champ de recherche -->
           <b-form-input v-model="search" type="text" placeholder="Nom du vo sinh"></b-form-input>
           </br>
-          <b-table striped hover :items="userFilteredList" :per-page="10"></b-table>
 
           <!-- pagination -->
+          <b-pagination :total-rows="userFilteredList.length" v-model="currentPage"
+            align="center" size="md" :per-page="elementPerPage" v-show="userList.length > 0">
+          </b-pagination>
 
           <!-- liste des personnes -->
+          <b-table striped hover :items="userSlicedList" :per-page="10"></b-table>
 
         </b-col>
         <b-col sm="4">
@@ -33,6 +36,7 @@ export default {
     return {
       search: '',
       currentPage: 1,
+      elementPerPage: 10,
       userList: []
     }
   },
@@ -43,6 +47,14 @@ export default {
         // TODO sanitize carateres speciaux
         return (user.firstName + ' ' + user.lastName)
           .toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
+      });
+    },
+    userSlicedList() {
+  	  var self = this;
+      var offset = (self.currentPage - 1) * self.elementPerPage;
+      console.log('offset ' + offset);
+      return self.userFilteredList.filter(function(user, index) {
+        return index >= offset && index < offset + self.elementPerPage;
       });
     }
   },

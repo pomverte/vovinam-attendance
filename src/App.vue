@@ -37,7 +37,12 @@ export default {
       search: '',
       currentPage: 1,
       elementPerPage: 10,
-      tableColumns: [ 'firstName', 'lastName', 'rank' ],
+      tableColumns: [
+        // WARN sortable: true trie sur la page affichee uniquement
+        { key: 'firstName', label: 'Prénom'},
+        { key: 'lastName', label: 'Nom'},
+        { key: 'rank', label: 'Grade'}
+      ],
       userList: []
     }
   },

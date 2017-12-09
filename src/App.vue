@@ -16,7 +16,7 @@
           </b-pagination>
 
           <!-- liste des personnes -->
-          <b-table striped hover :items="userSlicedList" :per-page="10"></b-table>
+          <b-table striped hover :items="userSlicedList" :fields="tableColumns" :per-page="10"></b-table>
 
         </b-col>
         <b-col sm="4">
@@ -37,6 +37,7 @@ export default {
       search: '',
       currentPage: 1,
       elementPerPage: 10,
+      tableColumns: [ 'firstName', 'lastName', 'rank' ],
       userList: []
     }
   },

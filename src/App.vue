@@ -1,4 +1,7 @@
 <template>
+  <div id="app" class="container">
+    <b-jumbotron header="Vovinam Viet Vo Dao" lead="Liste de présence">
+    </b-jumbotron>
   </div>
 </template>
 
@@ -7,7 +10,7 @@ export default {
   name: 'app',
   data () {
     return {
-      
+
     }
   }
 }

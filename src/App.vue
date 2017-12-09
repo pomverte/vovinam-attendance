@@ -5,9 +5,16 @@
     <b-container>
       <b-row class="text-center">
         <b-col sm="8">
+
+          <!-- champ de recherche -->
           <b-form-input v-model="search" type="text" placeholder="Nom du vo sinh"></b-form-input>
           </br>
           <b-table striped hover :items="userFilteredList" :per-page="10"></b-table>
+
+          <!-- pagination -->
+
+          <!-- liste des personnes -->
+
         </b-col>
         <b-col sm="4">
           <p>I'm here</p>

@@ -37,3 +37,12 @@ npm run build
 ----
 
 For detailed explanation on how things work, consult the http://vuejs.github.io/vue-loader[docs for vue-loader].
+
+## References
+
+* https://vuejs.org/
+* https://vuejs.org/v2/guide/
+* http://slides.com/evanyou/progressive-javascript/
+* https://chrome.google.com/webstore/detail/vuejs-devtools
+* https://bootstrap-vue.js.org/docs/
+

@@ -21,6 +21,12 @@
               :fields="tableColumns"
               :current-page="currentPage"
               :per-page="elementPerPage">
+            <template slot="firstName" scope="row">
+              {{ row.item.firstName }} {{ row.item.lastName }}
+            </template>
+            <template slot="action" scope="row">
+              <b-button size="sm" variant="success">Add</b-button>
+            </template>
           </b-table>
 
         </b-col>
@@ -55,9 +61,9 @@ export default {
       elementPerPage: 10,
       tableColumns: [
         // WARN sortable: true trie sur la page affichee uniquement
-        { key: 'firstName', label: 'Prénom'},
-        { key: 'lastName', label: 'Nom'},
-        { key: 'rank', label: 'Grade'}
+        { key: 'firstName', label: 'Nom'},
+        { key: 'rank', label: 'Grade'},
+        { key: 'action', label: ' '}
       ],
       userList: []
     }

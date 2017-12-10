@@ -19,9 +19,18 @@
           <b-table striped hover :items="userSlicedList" :fields="tableColumns" :per-page="10"></b-table>
 
         </b-col>
+
+        <!-- liste des personnes selectionnees -->
         <b-col sm="4">
-          <p>I'm here</p>
+          <h5 v-if="userAttending.length > 0">
+            Cours du {{ today }} <b-badge>{{ userAttending.length }}</b-badge>
+          </h5>
+          <b-list-group>
+            <!-- TODO userList => userAttending -->
+            <b-list-group-item v-for="(user, index) in userList">{{ user.firstName }}</b-list-group-item>
+          </b-list-group>
         </b-col>
+
       </b-row>
     </b-container>
   </div>
@@ -29,12 +38,14 @@
 
 <script>
 import axios from 'axios'
+import moment from 'moment'
 
 export default {
   name: 'app',
   data () {
     return {
       search: '',
+      today: moment().locale('fr').format('dddd DD/MM/YYYY'),
       currentPage: 1,
       elementPerPage: 10,
       tableColumns: [
@@ -61,6 +72,9 @@ export default {
       return self.userFilteredList.filter(function(user, index) {
         return index >= offset && index < offset + self.elementPerPage;
       });
+    },
+    userAttending() {
+      return this.userList;
     }
   },
   created() {

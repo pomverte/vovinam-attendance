@@ -12,7 +12,7 @@
 
           <!-- pagination -->
           <b-pagination :total-rows="userFilteredList.length" v-model="currentPage"
-            align="center" size="md" :per-page="elementPerPage" v-show="userList.length > 0">
+            align="center" size="sm" hide-ellipsis :per-page="elementPerPage" v-show="userList.length > 0">
           </b-pagination>
 
           <!-- liste des personnes -->

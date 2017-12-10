@@ -16,7 +16,12 @@
           </b-pagination>
 
           <!-- liste des personnes -->
-          <b-table striped hover :items="userSlicedList" :fields="tableColumns" :per-page="10"></b-table>
+          <b-table striped hover
+              :items="userFilteredList"
+              :fields="tableColumns"
+              :current-page="currentPage"
+              :per-page="elementPerPage">
+          </b-table>
 
         </b-col>
 
@@ -66,13 +71,13 @@ export default {
           .toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
       });
     },
-    userSlicedList() {
-  	  var self = this;
-      var offset = (self.currentPage - 1) * self.elementPerPage;
-      return self.userFilteredList.filter(function(user, index) {
-        return index >= offset && index < offset + self.elementPerPage;
-      });
-    },
+    // userSlicedList() {
+  	//   var self = this;
+    //   var offset = (self.currentPage - 1) * self.elementPerPage;
+    //   return self.userFilteredList.filter(function(user, index) {
+    //     return index >= offset && index < offset + self.elementPerPage;
+    //   });
+    // },
     userAttending() {
       return this.userList;
     }

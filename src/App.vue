@@ -58,7 +58,6 @@ export default {
     userSlicedList() {
   	  var self = this;
       var offset = (self.currentPage - 1) * self.elementPerPage;
-      console.log('offset ' + offset);
       return self.userFilteredList.filter(function(user, index) {
         return index >= offset && index < offset + self.elementPerPage;
       });

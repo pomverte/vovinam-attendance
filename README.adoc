@@ -1,0 +1,39 @@
+# Vovinam Liste de Presence
+
+> A Vue.js project
+
+## Project Init
+
+[source, bash]
+----
+npm install --global bootstrap-vue bootstrap@4.0.0-beta.2
+npm install --global vue-cli
+vue init bootstrap-vue/webpack-simple vovinam-attendance
+
+cd vovinam-attendance
+git init .
+git add .gitignore
+git commit -m gitignore
+git add .
+git commit -m 'bootstrap-vue/webpack-simple'
+----
+
+
+## Build Setup
+
+[source, bash]
+----
+# install dependencies
+npm install
+npm install bootstrap-vue --save
+npm install axios --save
+npm install moment --save
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+----
+
+For detailed explanation on how things work, consult the http://vuejs.github.io/vue-loader[docs for vue-loader].

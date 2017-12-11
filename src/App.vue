@@ -25,7 +25,7 @@
               {{ row.item.firstName }} {{ row.item.lastName }}
             </template>
             <template slot="action" scope="row">
-              <b-button size="sm" variant="success">Add</b-button>
+              <b-button size="sm" variant="success">Ajout</b-button>
             </template>
           </b-table>
 

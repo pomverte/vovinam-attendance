@@ -38,7 +38,12 @@
           </h5>
           <b-list-group>
             <!-- TODO userList => userAttending -->
-            <b-list-group-item v-for="(user, index) in userAttending">{{ user.firstName }}</b-list-group-item>
+            <b-list-group-item v-for="(user, index) in userAttending">
+              {{ user.firstName }}
+              <b-button @click="removeUser(index)"
+                size="sm" variant="danger"
+                class="float-sm-right">Supprimer</b-button>
+            </b-list-group-item>
           </b-list-group>
         </b-col>
 
@@ -74,6 +79,9 @@ export default {
       if(this.userAttending.indexOf(user) === -1) {
         this.userAttending.push(user);
       }
+    },
+    removeUser: function(index) {
+      this.userAttending.splice(index, 1);
     }
   },
   computed: {

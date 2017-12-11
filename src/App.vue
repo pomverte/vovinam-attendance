@@ -25,7 +25,7 @@
               {{ row.item.firstName }} {{ row.item.lastName }}
             </template>
             <template slot="action" scope="row">
-              <b-button size="sm" variant="success">Ajout</b-button>
+              <b-button @click="addUser(row.item)" size="sm" variant="success">Ajouter</b-button>
             </template>
           </b-table>
 
@@ -38,7 +38,7 @@
           </h5>
           <b-list-group>
             <!-- TODO userList => userAttending -->
-            <b-list-group-item v-for="(user, index) in userList">{{ user.firstName }}</b-list-group-item>
+            <b-list-group-item v-for="(user, index) in userAttending">{{ user.firstName }}</b-list-group-item>
           </b-list-group>
         </b-col>
 
@@ -65,7 +65,15 @@ export default {
         { key: 'rank', label: 'Grade'},
         { key: 'action', label: ' '}
       ],
+      userAttending: [],
       userList: []
+    }
+  },
+  methods: {
+    addUser: function (user) {
+      if(this.userAttending.indexOf(user) === -1) {
+        this.userAttending.push(user);
+      }
     }
   },
   computed: {
@@ -76,7 +84,7 @@ export default {
         return (user.firstName + ' ' + user.lastName)
           .toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
       });
-    },
+    }
     // userSlicedList() {
   	//   var self = this;
     //   var offset = (self.currentPage - 1) * self.elementPerPage;
@@ -84,9 +92,6 @@ export default {
     //     return index >= offset && index < offset + self.elementPerPage;
     //   });
     // },
-    userAttending() {
-      return this.userList;
-    }
   },
   created() {
     var self = this;

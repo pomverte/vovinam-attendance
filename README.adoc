@@ -26,7 +26,7 @@ git commit -m 'bootstrap-vue/webpack'
 ----
 # install dependencies
 npm install
-npm install bootstrap-vue axios moment --save
+npm install bootstrap-vue axios moment vuefire --save
 npm install -g firebase
 npm install -g firebase-tools
 

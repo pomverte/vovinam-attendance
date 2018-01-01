@@ -45,6 +45,9 @@ firebase init
 firebase deploy fir-test-7c5ed
 ----
 
+* https://console.firebase.google.com/
+* https://fir-test-7c5ed.firebaseapp.com/
+
 For detailed explanation on how things work, consult the http://vuejs.github.io/vue-loader[docs for vue-loader].
 
 ## References
